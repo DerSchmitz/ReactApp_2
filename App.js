@@ -2,45 +2,12 @@ import React, { Component } from 'react';
 import { StyleSheet, Text,  AppRegistry, Image, View,  ScrollView, Animated } from 'react-native';
 import { Dimensions }  from 'react-native';
 
-import TourCta  from  ./components/tourCta/index;
+
+// Import Components
+import TourCta  from  './src/components/tourCta/index.js';
+import Blink  from  './src/components/blink/index.js';
 
 
-
-
-// Man erschaffe eine neue Klasse für jxml-Elemente
-class Blink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isShowingText: true };
-
-    // Toggle the state every second
-    setInterval(() => (
-                  // ausgehend vom momentanen Status
-      this.setState(previousState => (
-                          // ändere den Status ins Gegenteil
-          { isShowingText: !previousState.isShowingText }
-      ))
-    ), 1000);
-  }
-
-
-
-
-  // bei jedem Rendern
-  render() {
-    // sofern der Sichtbarkeits-State nicht auf true steht
-    if (!this.state.isShowingText) {
-      // rendere nichts
-      return null;
-    }
-
-    // andernfalls
-    return (
-      // gebe jederzeit den Inhalt als Text-Element aus
-      <Text>{this.props.text}</Text>
-    );
-  }
-}
 
 export default class HomeTest extends Component {
   render() {
@@ -63,7 +30,7 @@ export default class HomeTest extends Component {
 
           <View style={styles.centerContainer}>
             <Image source={topPic}  style={styles.homeImage} />
-              <TourCta name="Mode"  />
+              <TourCta name="Moden"  />
 
           </View>
 
