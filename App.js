@@ -4,9 +4,9 @@ import { Dimensions }  from 'react-native';
 
 
 // Import Components
-import TourCta  from  './src/components/tourCta/index.js';
-import Blink  from  './src/components/blink/index.js';
-
+import { TourCta } from  './src/components/tourCta/index';
+import { Blink } from  './src/components/blink/index';
+import { FadeInView } from  './src/components/fadeInView/index';
 
 
 export default class HomeTest extends Component {
@@ -30,7 +30,7 @@ export default class HomeTest extends Component {
 
           <View style={styles.centerContainer}>
             <Image source={topPic}  style={styles.homeImage} />
-              <TourCta name="Moden"  />
+              <TourCta name="Modenshow"  />
 
           </View>
 
@@ -89,42 +89,7 @@ const win = Dimensions.get('window');
 
 
 
-class FadeInView extends Component {
-  state = {
-    fadeAnim: new Animated.Value(0),  // Initial value for opacity: 0
-  }
 
-  componentDidMount() {
-    Animated.timing(                  // Animate over time
-      this.state.fadeAnim,            // The animated value to drive
-      {
-        toValue: 1,                   // Animate to opacity: 1 (opaque)
-        duration: 10000,              // Make it take a while
-      }
-    ).start();                       // Starts the animation
-  }
-
-  render() {
-    let { fadeAnim } = this.state;
-
-// If Scroll-Counter is greater than the initial widnow height
-// if(scrollY>win.height) {
-
-    return (
-      <Animated.View                 // Special animatable View
-        style={{
-          ...this.props.style,
-          opacity: fadeAnim,         // Bind opacity to animated value
-        }}
-      >
-        {this.props.children}
-      </Animated.View>
-    );
-// }
-
-
-  }
-}
 
 
 
