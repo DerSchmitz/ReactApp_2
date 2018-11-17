@@ -2,45 +2,10 @@ import React, { Component } from 'react';
 import { StyleSheet, Text,  AppRegistry, Image, View,  ScrollView, Animated } from 'react-native';
 import { Dimensions }  from 'react-native';
 
+import TourCta  from  ./components/tourCta/index;
 
 
 
-// export default class App extends React.Component {
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <Text>Open up App.js to start working on your app!</Text>
-//
-//         <Text>Hello world!</Text>
-//       </View>
-//
-//     );
-//   }
-// }
-
-// Man erschaffe eine neue Klasse für jxml_Elemente, welche
-class TourCta extends Component {
-  render() {
-    return (
-      // folgenden jxml-output bedeuten
-
-                    // nehme den Attributwert von "Name" und setze es an den String an
-        <Text
-        style={{
-                  color: 'white',
-                  backgroundColor: 'rgba(52, 52, 52, 0.8)',
-                  paddingHorizontal:15,
-                  paddingVertical:5,
-
-                  position: 'absolute',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-        > {this.props.name}-Tour starten</Text>
-
-    );
-  }
-}
 
 // Man erschaffe eine neue Klasse für jxml-Elemente
 class Blink extends Component {
@@ -76,17 +41,6 @@ class Blink extends Component {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 export default class HomeTest extends Component {
   render() {
