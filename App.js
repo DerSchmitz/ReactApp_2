@@ -8,6 +8,12 @@ import { TourCta } from  './src/components/tourCta/index';
 import { Blink } from  './src/components/blink/index';
 import { FadeInView } from  './src/components/fadeInView/index';
 
+// Import Styles
+//import { StyleSheet } from './styles/styles.js'
+var styles = require('./styles/styles.js');
+
+
+
 
 export default class HomeTest extends Component {
   render() {
@@ -30,7 +36,7 @@ export default class HomeTest extends Component {
 
           <View style={styles.centerContainer}>
             <Image source={topPic}  style={styles.homeImage} />
-              <TourCta name="Modenshow"  />
+              <TourCta name="Mode"  />
 
           </View>
 
@@ -84,7 +90,6 @@ export default class HomeTest extends Component {
 
 
 
-const win = Dimensions.get('window');
 
 
 
@@ -95,47 +100,5 @@ const win = Dimensions.get('window');
 
 
 
-const styles = StyleSheet.create({
 
 
-
-  textContainer: {
-    paddingVertical:10 ,
-    paddingHorizontal: 10,
-
-  },
-
-  centerContainer: {
-    flex:1,
-    alignItems:'center',
-    justifyContent:'center',
-
-  },
-
-
-
-  topNavContainer: {
-    width: win.width,
-    paddingVertical:10 ,
-    paddingHorizontal: 10,
-    paddingTop: 30,
-    backgroundColor: '#ccc',
-  },
-  navText : {
-    fontSize: 20,
-    color: '#000',
-  },
-  homeImage: {
-    marginTop:0,
-    width: win.width,
-    height: win.height/2-30,
-    resizeMode: 'cover',
-
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
-});
